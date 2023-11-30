@@ -9,7 +9,7 @@
 </div>
 
 ## 💻Objetivos
-Este é um programa desenvolvido em Python para a disciplina de Algoritmos e Estruturas de Dados II, proposta pelo professor [Michel Pires](https://github.com/mpiress) <br>
+Este é um programa desenvolvido em Python para a disciplina de Algoritmos e Estruturas de Dados II, proposta pelo professor [Michel Pires](https://github.com/mpiress). <br>
 O objetivo desta atividade consiste em identificar um problema específico que seja suscetível de modelagem por meio de um grafo.
 Para esse trabalho foi escolhido o tema de recomendação de livros no qual é possivel realizar uma recomendação a um dado usuário usando algoritmos de grafo para isso.
 Sendo assim ao final dessa atividade teremos um algoritmo que realiza as operações:
@@ -33,10 +33,12 @@ pip install numpy
 
   - Para a realização desse trabalho foi utilizado a ideia de colocar cada usuário como nó do grafo e ligar os usuários pela quantidade de livros que eles possuem em comum, sendo essa o peso das arestas. 
     - Para a realização disso, foi computado os dados de usuários que fizeram mais de 5 recomendações entretanto esse valor pode ser alterado indo na cédula 3 presente no arquivo `Main.ipynb` e alterar a variável: `qt_rating` para o numero desejado.
-  -  Entao depois de realizado essas ligações é feito o cálculo da similaridade de Jaccard para cada conjunto de arestas presente no grafo, esse cálculo é feito pela interseção de livros lidos pelos pares de nós que se conectam pela aresta divido pela uniao dos livros lidos por ambos, esse valor resultante passa a ser o novo peso da aresta desse par de vértice.
-  - Logo depois é realizada a execução da função `maximum_spanning_tree` da biblioteca NetworkX para gerar a árovre de abrngencia máxima.
-  - Com essa árvore e a redução significativa do grafo é aplicado uma busca em largura (BFS) a partir do usuário que se deseja procurar no grafo.
-  - Com isso é mostrado ao usuário a lista de livros que foram recomendados, essa lista pode ser limitada a uma quantidade de livros X, se caso deseja aumentar ou diminuir esse valor, na ultima cédula, basta mudar o valor da variável: `num_books_to_recommend` para o valor desejado. 
+  -  Entao depois de realizado essas ligações é feito o cálculo da similaridade de Jaccard para cada conjunto de arestas presente no grafo, esse cálculo é feito pela interseção de livros lidos pelos pares de nós que se conectam pela aresta, dividido pela uniao dos livros lidos por ambos, esse valor resultante passa a ser o novo peso da aresta desse par de vértice.
+  - Logo depois é realizada a execução da função `maximum_spanning_tree` da biblioteca NetworkX para gerar a árovre de abrangencia máxima.
+  - Com essa árvore ocorre uma redução significativa no custo de execução, facilitando a aplicação dos outros algoritmos.
+  - Logo apos é aplicado uma busca em largura (BFS) a partir do usuário que se deseja procurar no grafo.
+  - Com isso é mostrado ao usuário a lista de livros que foram recomendados, essa lista pode ser limitada a uma quantidade de livros X, se caso deseja aumentar ou diminuir esse valor, na ultima cédula, basta mudar o valor da variável: `num_books_to_recommend` para o valor desejado.
+    - OBS: no arquivo `inputOriginal`, esta presente o dataFrame original retirado do site Kaggle, esse arquivo foi podado para uma boa execução deste algoritmo e devido as limitações na arquitetura computacional. <br> Site retirado o dataFrame: [DataFrame](https://www.kaggle.com/datasets/zygmunt/goodbooks-10k?select=ratings.csv)
 
 
 ## RESULTADOS E ANÁLISE
