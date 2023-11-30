@@ -32,7 +32,7 @@ pip install numpy
 ## 🧠Lógica adotada
 
   - Para a realização desse trabalho foi utilizado a ideia de colocar cada usuário como nó do grafo e ligar os usuários pela quantidade de livros que eles possuem em comum, sendo essa o peso das arestas. 
-    - Para a realização disso, foi computado os dados de usuários que fizeram mais de 5 recomendações entretanto esse valor pode ser alterado indo na cedula 3 presente no arquivo `Main.ipynb` e alterar a variável: `qt_rating` para o numero desejado.
+    - Para a realização disso, foi computado os dados de usuários que fizeram mais de 5 recomendações entretanto esse valor pode ser alterado indo na cédula 3 presente no arquivo `Main.ipynb` e alterar a variável: `qt_rating` para o numero desejado.
   -  Entao depois de realizado essas ligações é feito o cálculo da similaridade de Jaccard para cada conjunto de arestas presente no grafo, esse cálculo é feito pela interseção de livros lidos pelos pares de nós que se conectam pela aresta divido pela uniao dos livros lidos por ambos, esse valor resultante passa a ser o novo peso da aresta desse par de vértice.
   - Logo depois é realizada a execução da função `maximum_spanning_tree` da biblioteca NetworkX para gerar a árovre de abrngencia máxima.
   - Com essa árvore e a redução significativa do grafo é aplicado uma busca em largura (BFS) a partir do usuário que se deseja procurar no grafo.
@@ -41,29 +41,29 @@ pip install numpy
 
 ## RESULTADOS E ANÁLISE
 Antes de procedermos com qualquer análise, é crucial ter em mente que os resultados dos testes podem variar consideravelmente dependendo das máquinas em que o programa é executado. Conforme a intuição sugere, máquinas mais poderosas tendem a produzir resultados superiores.
-Os resultados mostrados nessa seção são retirados dos textos que ja se encontram na pasta `input`.
+Os resultados mostrados nessa seção são retirados dos dataset que ja se encontram na pasta `DataFiles`.
 Os resultados que se puderam extrair dessa atividade foi que o grafo gerado é um grafo esparso, com seu numero de arestas sendo inferior à $ |V^{2}|$.
 
 Grafo de output gerado pelo aplicativo Gephi: 
 <div align="center">
-  <img src="imgs/outputWord.png" alt="output" width="500px">
+  <img src="img/Grafo.png" alt="output" width="500px">
   <p align="center"><em> Grafo Gephi </em></p>
 </div>
 
 Lista de livros no output do usuário:
 <div align="center">
-  <img src="imgs/outputWord.png" alt="output" width="500px">
-  <p align="center"><em> Terminal com a lista de livros. </em></p>
+  <img src="img/Terminal.png" alt="output" width="500px">
+  <p align="center"><em> Terminal com a lista de livros recomendada ao usuário de número 11691. </em></p>
 </div>
 
 ## 📈 Conclusões:
-Pode se concluir com essa atividade a versitilidade de grafos e suas aplicações diversar em varias areas, mesmo a área de recomendação tendo seus melhores resultados na utilização de tecnicas de machine learning, foi possivel criar um sistema de recomendação a partir de grafos.
-Alem disso foi possivel aprender novas tecnicas e conceito para o uso dos grafos.
+Pode se concluir com essa atividade a versitilidade de grafos e suas aplicações diversar em varias areas, mesmo a área de recomendação tendo seus melhores resultados na utilização de tecnicas de machine learning, foi possivel criar um sistema de recomendação a partir de grafos eficiente e personalizado ao gosto de cada leitor presente no DataFrame.
+Além disso com esse trabalho foi possível aprender novas tecnicas da aplicação de grafos e novos algoritmos tambem, foi possivel aprender diversos algoritmos de grafos e seus funcionamentos.
 
 ## 👾Compilação e execução
 
-O codigo disponibilizado foi criado e executado em notebook Acer core i5 Aspire M com sistema operacional Windowns 10 e utlizado um terminal de comando com WSL.
-Para a execução é necessario somente executar todas as cedulas do arquivo.
+O codigo disponibilizado foi criado e executado em notebook Acer core i5 Aspire M com sistema operacional Windowns 10 e utlizado um terminal de execução do Jupyter Notebook.
+Para a execução é necessario executar todas as cedulas do arquivo, ou uma cédula por vez.
 
 ## ✉️Contato
 <div>
