@@ -4,7 +4,6 @@
 <!-- imagem -->
 
 [![requirement](https://img.shields.io/badge/IDE-Visual%20Studio%20Code-informational)](https://code.visualstudio.com/docs/?dv=linux64_deb)
-![Make](https://img.shields.io/badge/Compilacao-Make-orange)
 ![Linguagem](https://img.shields.io/badge/Linguagem-Python-blue)
 </div>
 
